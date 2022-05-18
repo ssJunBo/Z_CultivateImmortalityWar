@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.scopes" />
+  <component name="ChangeListManager">
+    <list default="true" id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="【fix】init">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ArtResource/2D_Anim/rocker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtResource/2D_Anim/rocker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/StartDialog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/StartDialog.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/EUiID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/EUiID.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UILogic/StartDialogLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UILogic/StartDialogLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UiView/StartDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UiView/StartDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UiLogicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UiLogicManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiDialogBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiDialogBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/80b6e89699f94b0bba3ad54c3e10266713ce00/d5/5bdf5c0c/Object.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29LRWBDRhjCEfkO0dGMB3EtIm8s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "rider.run.widget.enabled.cache": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2020.3.34f1c2\Editor\Unity.exe" />
@@ -22,15 +63,73 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22188">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22188" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="" />
+      <created>1652890410329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652890410329</updated>
+      <workItem from="1652890417493" duration="3411000" />
+    </task>
+    <task id="LOCAL-00001" summary="【fix】init project">
+      <created>1652890457119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652890457119</updated>
+    </task>
+    <task id="LOCAL-00002" summary="【fix】initial">
+      <created>1652890588570</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652890588570</updated>
+    </task>
+    <task id="LOCAL-00003" summary="【fix】init">
+      <created>1652890613179</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652890613179</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="【fix】init project" />
+    <MESSAGE value="【fix】initial" />
+    <MESSAGE value="【fix】init" />
+    <option name="LAST_COMMIT_MESSAGE" value="【fix】init" />
   </component>
 </project>

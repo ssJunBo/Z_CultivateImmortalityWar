@@ -1,16 +1,23 @@
 ﻿using bFrameWork.Game.ResourceFrame;
-using bFrameWork.Game.Tools;
 using Common;
+using Helpers;
 using Managers;
 using UnityEngine;
+using EUiType = Common.EUiType;
 using Object = UnityEngine.Object;
+using TimeHelper = bFrameWork.Game.Tools.TimeHelper;
 
 namespace bFrameWork.Game.UIFrame.Base
 {
     public abstract class UiLogicBase
     {
         protected abstract string Path { get; set; }
-        public abstract EUiID Id { get; set; }
+
+        // 具体ui
+        public abstract EUiID UiId { get; set; }
+
+        // ui类型 添加栈中or直接销毁
+        public abstract EUiType UiType { get; set; }
 
         private bool isShowing;
         private GameObject mObj;
@@ -24,7 +31,7 @@ namespace bFrameWork.Game.UIFrame.Base
 
         public virtual void Close()
         {
-            UiLogicManager.Instance.RemoveUi();
+            // UiManager.Instance.PopUi();
 
             if (mDialog != null)
             {
@@ -32,10 +39,12 @@ namespace bFrameWork.Game.UIFrame.Base
                 mDialog.Release();
                 mDialog = null;
             }
-            
+
             if (mObj != null)
             {
-                Object.Destroy(mObj);
+                mObj.SetRealActive(false);
+                mObj.transform.SetAsFirstSibling();
+                // Object.Destroy(mObj);
             }
         }
 
@@ -52,36 +61,51 @@ namespace bFrameWork.Game.UIFrame.Base
             if (!isShowing) return;
 
             if (obj != null)
-            { 
-                mObj = GameObject.Instantiate(obj, GameManager.Instance.ui2DTransform) as GameObject;
+            {
+                var parentTrs = GameManager.Instance.ui2DTransform;
+                mDialog = UiManager.Instance.GetUiDialog(UiId);
 
-                if (mObj != null)
+                if (mDialog != null)
                 {
+                    mObj = mDialog.gameObject;
+                    mObj.SetRealActive(true);
+                    mObj.transform.SetParent(parentTrs);
+                    mObj.transform.localPosition = Vector3.zero;
+                    mObj.transform.SetAsLastSibling();
+                }
+                else
+                {
+                    mObj = Object.Instantiate(obj, parentTrs) as GameObject;
+                    if (mObj == null)
+                    {
+                        //加载窗口失败，返回初始化失败
+                        Debug.LogError("加载窗口失败！path = " + path);
+                        return;
+                    }
+
                     mDialog = mObj.GetComponent<UiDialogBase>();
 
                     if (mDialog == null)
                     {
                         Debug.LogError("cant find designer component : " + obj.name);
-                    }
-                    else
-                    {
-                        InitLogic();
-
-                        mDialog.SetLogic(this);
-
-                        mDialog.Init();
-                        //延迟一帧，当ui真正绘制出来以后，在调用ShowFinished 这样一些坐标转换，和一些UI操作才不会出错
-                        //UI的显示操作都应该放在ShowFinished中去做，而不应该在Init中去做 
-                        TimeHelper.Instance.DelayHowManyFramesAfterCallBack(1, () => { mDialog.ShowFinished(); });
+                        return;
                     }
 
-                    UiLogicManager.Instance.PushUi(this);
+                    UiManager.Instance.AddUiDialog(UiId, mDialog);
                 }
-                else
+
+                InitLogic();
+
+                mDialog.SetLogic(this);
+
+                mDialog.Init();
+                //延迟一帧，当ui真正绘制出来以后，在调用ShowFinished 这样一些坐标转换，和一些UI操作才不会出错
+                //UI的显示操作都应该放在ShowFinished中去做，而不应该在Init中去做 
+                TimeHelper.Instance.DelayHowManyFramesAfterCallBack(1, () => { mDialog.ShowFinished(); });
+
+                if (UiType == EUiType.AddStack)
                 {
-                    //加载窗口失败，返回初始化失败
-                    Close();
-                    Debug.LogError("加载窗口失败！path = " + path);
+                    UiManager.Instance.PushUi(this);
                 }
             }
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using bFrame.Game.ResourceFrame;
 using bFrameWork.Game.ResourceFrame;
+using Common;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
@@ -34,11 +35,8 @@ namespace bFrameWork.Game.UIFrame.Base
             RemoveAllToggleListener();
             _mAllButton.Clear();
             _mAllToggle.Clear();
-
-            Destroy(gameObject);
         }
 
-    
         // TODO 应该从图集里面取图
         public bool ChangeImageSprite(string path, Image image, bool setNativeSize = false)
         {

@@ -6,9 +6,12 @@ namespace Functions.PersonInfoDialog.UILogic
 {
     public class StartDialogLogic : UiLogicBase
     {
+        #region base info
         protected override string Path { get; set; } = "Prefabs/Dialogs/StartDialog";
-        public override EUiID Id { get; set; } = EUiID.Start;
-       
+        public override EUiID UiId { get; set; } = EUiID.Start;
+        public override EUiType UiType { get; set; } = EUiType.ImmediateDestroy;
+        #endregion
+        
         private readonly CModelPlay _model;
 
         public StartDialogLogic(CModelPlay model)

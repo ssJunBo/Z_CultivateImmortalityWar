@@ -5,4 +5,10 @@
         Start = 0,
         Loading
     }
+
+    public enum EUiType
+    {
+        AddStack,
+        ImmediateDestroy
+    }
 }

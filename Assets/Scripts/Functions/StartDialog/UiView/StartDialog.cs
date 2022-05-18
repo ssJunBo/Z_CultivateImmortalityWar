@@ -21,5 +21,10 @@ namespace Functions.StartDialog.UiView
         {
             // 刷新UI
         }
+
+        public void Close()
+        {
+            _startDialogLogic.Close(); 
+        }
     }
 }
