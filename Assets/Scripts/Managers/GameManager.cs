@@ -1,7 +1,6 @@
-﻿using AllManager.Model;
-using bFrame.Game.Base;
-using bFrameWork.Game.ResourceFrame;
+﻿using bFrame.Game.Base;
 using Helpers;
+using Managers.Model;
 using UnityEngine;
 using TimeHelper = bFrameWork.Game.Tools.TimeHelper;
 
@@ -41,7 +40,7 @@ namespace Managers
         {
             LoadConfig();
 
-            ModelPlay.OpenUiByType(EUiType.UiStart);
+            ModelPlay.OpenUiByType(EUiType.Main);
         }
 
         private void InitManager()

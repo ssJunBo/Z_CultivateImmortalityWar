@@ -1,28 +1,20 @@
 ﻿using System;
-using Functions.PersonInfoDialog.UILogic;
+using AllManager.Model;
+using Functions.Main.Logic;
+using Functions.PersonDetailInfo.Logic;
 using Helpers;
-using Other;
 
-namespace AllManager.Model
+namespace Managers.Model
 {
     public class CModelPlay : IModel
     {
         #region UiLogic 数据类
 
-        private StartDialogLogic _startDialogLogic;
+        private UiPersonDetailInfoLogic uiPersonDetailInfoLogic;
+        public UiPersonDetailInfoLogic UiPersonDetailInfoLogic => uiPersonDetailInfoLogic ??= new UiPersonDetailInfoLogic(this);
 
-        public StartDialogLogic StartDialogLogic
-        {
-            get
-            {
-                if (_startDialogLogic == null)
-                {
-                    _startDialogLogic = new StartDialogLogic(this);
-                }
-
-                return _startDialogLogic;
-            }
-        }
+        private UiMainLogic uiMainLogic;
+        public UiMainLogic UiMainLogic => uiMainLogic ??= new UiMainLogic(this);
 
         #endregion
 
@@ -33,10 +25,10 @@ namespace AllManager.Model
 
         public void Release()
         {
-            if (_startDialogLogic != null)
+            if (uiPersonDetailInfoLogic != null)
             {
-                _startDialogLogic.Close();
-                _startDialogLogic = null;
+                uiPersonDetailInfoLogic.Close();
+                uiPersonDetailInfoLogic = null;
             }
         }
 
@@ -59,10 +51,11 @@ namespace AllManager.Model
         {
             switch (eUiType)
             {
-                case EUiType.UiStart:
-                    StartDialogLogic.Open();
+                case EUiType.PersonDetailInfo:
+                    UiPersonDetailInfoLogic.Open();
                     break;
-                case EUiType.UiMainMenu:
+                case EUiType.Main:
+                    UiMainLogic.Open();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(eUiType), eUiType, null);

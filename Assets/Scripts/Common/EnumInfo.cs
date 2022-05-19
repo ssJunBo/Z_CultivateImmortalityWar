@@ -2,14 +2,9 @@
 {
     public enum EUiID
     {
-        Start = 0,
-        Loading
-    }
-
-    public enum EUiType
-    {
-        AddStack,
-        ImmediateDestroy
+        Main = 0,
+        PersonDetailInfo,
+        Loading,
     }
 
     /// <summary>

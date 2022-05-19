@@ -3,7 +3,6 @@ using Common;
 using Helpers;
 using Managers;
 using UnityEngine;
-using EUiType = Common.EUiType;
 using Object = UnityEngine.Object;
 using TimeHelper = bFrameWork.Game.Tools.TimeHelper;
 
@@ -11,13 +10,10 @@ namespace bFrameWork.Game.UIFrame.Base
 {
     public abstract class UiLogicBase
     {
-        protected abstract string Path { get; set; }
+        protected abstract string Path { get; }
 
         // 具体ui
-        public abstract EUiID UiId { get; set; }
-
-        // ui类型 添加栈中or直接销毁
-        public abstract EUiType UiType { get; set; }
+        protected abstract EUiID UiId { get; }
 
         private bool isShowing;
         private GameObject mObj;
@@ -31,20 +27,16 @@ namespace bFrameWork.Game.UIFrame.Base
 
         public virtual void Close()
         {
-            // UiManager.Instance.PopUi();
-
             if (mDialog != null)
             {
                 isShowing = false;
                 mDialog.Release();
-                mDialog = null;
             }
 
             if (mObj != null)
             {
                 mObj.SetRealActive(false);
                 mObj.transform.SetAsFirstSibling();
-                // Object.Destroy(mObj);
             }
         }
 
@@ -63,7 +55,7 @@ namespace bFrameWork.Game.UIFrame.Base
             if (obj != null)
             {
                 var parentTrs = GameManager.Instance.ui2DTransform;
-                mDialog = UiManager.Instance.GetUiDialog(UiId);
+                mDialog = UiManager.GetUiDialog(UiId);
 
                 if (mDialog != null)
                 {
@@ -91,7 +83,7 @@ namespace bFrameWork.Game.UIFrame.Base
                         return;
                     }
 
-                    UiManager.Instance.AddUiDialog(UiId, mDialog);
+                    UiManager.AddUiDialog(UiId, mDialog);
                 }
 
                 InitLogic();
@@ -99,14 +91,12 @@ namespace bFrameWork.Game.UIFrame.Base
                 mDialog.SetLogic(this);
 
                 mDialog.Init();
+                
                 //延迟一帧，当ui真正绘制出来以后，在调用ShowFinished 这样一些坐标转换，和一些UI操作才不会出错
                 //UI的显示操作都应该放在ShowFinished中去做，而不应该在Init中去做 
                 TimeHelper.Instance.DelayHowManyFramesAfterCallBack(1, () => { mDialog.ShowFinished(); });
 
-                if (UiType == EUiType.AddStack)
-                {
-                    UiManager.Instance.PushUi(this);
-                }
+                UiManager.PushUi(this);
             }
         }
 

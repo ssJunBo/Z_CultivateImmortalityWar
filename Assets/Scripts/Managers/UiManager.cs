@@ -1,35 +1,46 @@
 ﻿using System.Collections.Generic;
-using bFrameWork.Game.Base;
 using bFrameWork.Game.UIFrame.Base;
 using Common;
+using UnityEngine;
 
 namespace Managers
 {
-    public class UiManager : Singleton<UiManager>
+    public static class UiManager 
     {
         /// <summary>
         /// 打开的UI列表
         /// </summary>
-        private readonly Stack<UiLogicBase> _ltUiLogicBase = new Stack<UiLogicBase>();
+        private static readonly Stack<UiLogicBase> UiLogicBaseStack = new Stack<UiLogicBase>();
 
-        private readonly Dictionary<EUiID, UiDialogBase> _dialogDict = new Dictionary<EUiID, UiDialogBase>();
+        /// <summary>
+        /// 打开过的dialog预制体缓存池 缓存所有dialog预制体
+        /// </summary>
+        private static readonly Dictionary<EUiID, UiDialogBase> DialogDict = new Dictionary<EUiID, UiDialogBase>();
 
-        public void PushUi(UiLogicBase ui)
+        public static void PushUi(UiLogicBase ui)
         {
-            _ltUiLogicBase.Push(ui);
+            UiLogicBaseStack.Push(ui);
         }
 
-        public void PopUi()
+        public static void Back()
         {
-            if (_ltUiLogicBase.Count > 0)
+            if (UiLogicBaseStack.Count > 1)
             {
-                UiLogicBase uiLogicBase = _ltUiLogicBase.Pop();
+                UiLogicBase closeUiLogicBase = UiLogicBaseStack.Pop();
+                closeUiLogicBase.Close();
+                
+                UiLogicBase openUiLogicBase = UiLogicBaseStack.Peek();
+                openUiLogicBase.Open();
+            }
+            else
+            {
+                Debug.Log("Ui 堆栈里无多余界面...");
             }
         }
 
-        public UiDialogBase GetUiDialog(EUiID uiID)
+        public static UiDialogBase GetUiDialog(EUiID uiID)
         {
-            return _dialogDict.ContainsKey(uiID) ? _dialogDict[uiID] : null;
+            return DialogDict.ContainsKey(uiID) ? DialogDict[uiID] : null;
         }
 
         /// <summary>
@@ -37,23 +48,22 @@ namespace Managers
         /// </summary>
         /// <param name="uiID"></param>
         /// <param name="uiDialogBase"></param>
-        public void AddUiDialog(EUiID uiID, UiDialogBase uiDialogBase)
+        public static void AddUiDialog(EUiID uiID, UiDialogBase uiDialogBase)
         {
-            if (!_dialogDict.ContainsKey(uiID))
+            if (!DialogDict.ContainsKey(uiID))
             {
-                _dialogDict[uiID] = uiDialogBase;
+                DialogDict[uiID] = uiDialogBase;
             }
         }
 
         /// <summary>
         /// 移除dialog
         /// </summary>
-        /// <param name="uiDialogBase"></param>
-        public void RemoveUiDialog(EUiID uiID)
+        public static void RemoveUiDialog(EUiID uiID)
         {
-            if (_dialogDict.ContainsKey(uiID))
+            if (DialogDict.ContainsKey(uiID))
             {
-                _dialogDict.Remove(uiID);
+                DialogDict.Remove(uiID);
             }
         }
     }

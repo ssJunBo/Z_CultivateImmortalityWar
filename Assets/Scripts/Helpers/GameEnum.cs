@@ -2,8 +2,8 @@
 {
     public enum EUiType
     {
-        UiStart,
-        UiMainMenu
+        Main,
+        PersonDetailInfo,
     }
     
 }
