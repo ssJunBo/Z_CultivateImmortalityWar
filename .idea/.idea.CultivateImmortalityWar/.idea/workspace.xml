@@ -1,64 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/LoadingDialog.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/LoadingDialog.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/MainDialog.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/MainDialog.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/PersonDetailInfoDialog.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/PersonDetailInfoDialog.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/Logic/LoadingDialogLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/Logic/LoadingDialogLogic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/View.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/View/LoadingDialog.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/View/LoadingDialog.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/Logic/UiMainLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/Logic/UiMainLogic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/View.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/Logic.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/Logic/UiPersonDetailInfoLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/Logic/UiPersonDetailInfoLogic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/View.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/View/PersonDetailInfoDialog.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/View/PersonDetailInfoDialog.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/View/PersonInfoPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/View/PersonInfoPanel.cs.meta" afterDir="false" />
+    <list default="true" id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="【fix】新文件提交">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/Common SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Fonts/Common SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/CommonDialog.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/CommonDialog/LoadingDialog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/CommonDialog/LoadingDialog.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/PersonDialog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/PersonDialog.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/StartDialog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/StartDialog.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiLogic.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiLogic/LoadingDialogLogic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiLogic/LoadingDialogLogic.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiView.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiView/LoadingDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiView/LoadingDialog.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainDialog.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainPanel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainPanel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Start.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UILogic.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UILogic/StartDialogLogic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UILogic/StartDialogLogic.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UiView.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UiView/StartDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UiView/StartDialog.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/GameEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/GameEnum.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Model/CModelPlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Model/CModelPlay.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +14,7 @@
     <setting file="mock://C:/Project/CultivateImmortalityWar/Assets/Scripts/Common/EnumInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/Logic/UiPersonDetailInfoLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/View/PersonInfoPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Project/CultivateImmortalityWar/Assets/Scripts/Managers/Model/CModelPlay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/80b6e89699f94b0bba3ad54c3e10266713ce00/d5/5bdf5c0c/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -137,7 +83,7 @@
       <updated>1652890410329</updated>
       <workItem from="1652890417493" duration="3470000" />
       <workItem from="1652923087180" duration="2112000" />
-      <workItem from="1652973282054" duration="4113000" />
+      <workItem from="1652973282054" duration="4809000" />
     </task>
     <task id="LOCAL-00001" summary="【fix】init project">
       <created>1652890457119</created>
@@ -174,7 +120,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652925236454</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="【fix】结构调整 ui框架修改">
+      <created>1652977800746</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652977800746</updated>
+    </task>
+    <task id="LOCAL-00007" summary="【fix】新文件提交">
+      <created>1652977885172</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652977885173</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +162,9 @@
     <MESSAGE value="【fix】init" />
     <MESSAGE value="【fix】框架调整 修改提交" />
     <MESSAGE value="【fix】制作主界面提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="【fix】制作主界面提交" />
+    <MESSAGE value="【fix】结构调整 ui框架修改" />
+    <MESSAGE value="【fix】新文件提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="【fix】新文件提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -212,10 +174,10 @@
           <line>27</line>
           <properties documentPath="C:\Project\CultivateImmortalityWar\Assets\Scripts\Managers\UiManager.cs" initialLine="27" containingFunctionPresentation="method 'Back'">
             <startOffsets>
-              <option value="711" />
+              <option value="714" />
             </startOffsets>
             <endOffsets>
-              <option value="740" />
+              <option value="745" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -225,10 +187,10 @@
           <line>23</line>
           <properties documentPath="C:\Project\CultivateImmortalityWar\Assets\Scripts\Managers\UiManager.cs" initialLine="23" containingFunctionPresentation="method 'PushUi'">
             <startOffsets>
-              <option value="659" />
+              <option value="662" />
             </startOffsets>
             <endOffsets>
-              <option value="660" />
+              <option value="663" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
@@ -238,10 +200,10 @@
           <line>98</line>
           <properties documentPath="C:\Project\CultivateImmortalityWar\Assets\bFrameWork\Game\UIFrame\Base\UiLogicBase.cs" initialLine="98" containingFunctionPresentation="method 'HandleUiResourceOk'">
             <startOffsets>
-              <option value="2823" />
+              <option value="2805" />
             </startOffsets>
             <endOffsets>
-              <option value="2855" />
+              <option value="2828" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

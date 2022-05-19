@@ -55,7 +55,7 @@ namespace bFrameWork.Game.UIFrame.Base
             if (obj != null)
             {
                 var parentTrs = GameManager.Instance.ui2DTransform;
-                mDialog = UiManager.GetUiDialog(UiId);
+                mDialog = GameManager.Instance.UiManager.GetUiDialog(UiId);
 
                 if (mDialog != null)
                 {
@@ -83,7 +83,7 @@ namespace bFrameWork.Game.UIFrame.Base
                         return;
                     }
 
-                    UiManager.AddUiDialog(UiId, mDialog);
+                    GameManager.Instance.UiManager.AddUiDialog(UiId, mDialog);
                 }
 
                 InitLogic();
@@ -96,7 +96,7 @@ namespace bFrameWork.Game.UIFrame.Base
                 //UI的显示操作都应该放在ShowFinished中去做，而不应该在Init中去做 
                 TimeHelper.Instance.DelayHowManyFramesAfterCallBack(1, () => { mDialog.ShowFinished(); });
 
-                UiManager.PushUi(this);
+                GameManager.Instance.UiManager.PushUi(this);
             }
         }
 

@@ -29,7 +29,7 @@ namespace Functions.PersonDetailInfo.View
 
         public void Close()
         {
-            UiManager.Back();
+            GameManager.Instance.UiManager.Back();
         }
     }
 }

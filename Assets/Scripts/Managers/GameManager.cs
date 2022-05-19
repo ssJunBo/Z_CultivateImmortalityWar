@@ -20,6 +20,9 @@ namespace Managers
         private CModelPlay _modelPlay;
         public CModelPlay ModelPlay => _modelPlay ??= new CModelPlay();
 
+        private UiManager uiManager;
+        public UiManager UiManager => uiManager ??= new UiManager();
+        
         #endregion
 
         protected override void Awake()

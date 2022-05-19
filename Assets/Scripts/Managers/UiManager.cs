@@ -1,35 +1,36 @@
 ﻿using System.Collections.Generic;
+using bFrameWork.Game.Base;
 using bFrameWork.Game.UIFrame.Base;
 using Common;
 using UnityEngine;
 
 namespace Managers
 {
-    public static class UiManager 
+    public class UiManager : Singleton<UiManager>
     {
         /// <summary>
         /// 打开的UI列表
         /// </summary>
-        private static readonly Stack<UiLogicBase> UiLogicBaseStack = new Stack<UiLogicBase>();
+        private readonly Stack<UiLogicBase> uiLogicBaseStack = new Stack<UiLogicBase>();
 
         /// <summary>
         /// 打开过的dialog预制体缓存池 缓存所有dialog预制体
         /// </summary>
-        private static readonly Dictionary<EUiID, UiDialogBase> DialogDict = new Dictionary<EUiID, UiDialogBase>();
+        private readonly Dictionary<EUiID, UiDialogBase> dialogDict = new Dictionary<EUiID, UiDialogBase>();
 
-        public static void PushUi(UiLogicBase ui)
+        public void PushUi(UiLogicBase ui)
         {
-            UiLogicBaseStack.Push(ui);
+            uiLogicBaseStack.Push(ui);
         }
 
-        public static void Back()
+        public void Back()
         {
-            if (UiLogicBaseStack.Count > 1)
+            if (uiLogicBaseStack.Count > 1)
             {
-                UiLogicBase closeUiLogicBase = UiLogicBaseStack.Pop();
+                UiLogicBase closeUiLogicBase = uiLogicBaseStack.Pop();
                 closeUiLogicBase.Close();
-                
-                UiLogicBase openUiLogicBase = UiLogicBaseStack.Peek();
+
+                UiLogicBase openUiLogicBase = uiLogicBaseStack.Peek();
                 openUiLogicBase.Open();
             }
             else
@@ -38,9 +39,9 @@ namespace Managers
             }
         }
 
-        public static UiDialogBase GetUiDialog(EUiID uiID)
+        public UiDialogBase GetUiDialog(EUiID uiID)
         {
-            return DialogDict.ContainsKey(uiID) ? DialogDict[uiID] : null;
+            return dialogDict.ContainsKey(uiID) ? dialogDict[uiID] : null;
         }
 
         /// <summary>
@@ -48,22 +49,22 @@ namespace Managers
         /// </summary>
         /// <param name="uiID"></param>
         /// <param name="uiDialogBase"></param>
-        public static void AddUiDialog(EUiID uiID, UiDialogBase uiDialogBase)
+        public void AddUiDialog(EUiID uiID, UiDialogBase uiDialogBase)
         {
-            if (!DialogDict.ContainsKey(uiID))
+            if (!dialogDict.ContainsKey(uiID))
             {
-                DialogDict[uiID] = uiDialogBase;
+                dialogDict[uiID] = uiDialogBase;
             }
         }
 
         /// <summary>
         /// 移除dialog
         /// </summary>
-        public static void RemoveUiDialog(EUiID uiID)
+        public void RemoveUiDialog(EUiID uiID)
         {
-            if (DialogDict.ContainsKey(uiID))
+            if (dialogDict.ContainsKey(uiID))
             {
-                DialogDict.Remove(uiID);
+                dialogDict.Remove(uiID);
             }
         }
     }
