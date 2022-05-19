@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="【fix】init">
+    <list default="true" id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/EquipData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/EquipData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PersonInformationData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PersonInformationData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiLogic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiLogic/LoadingDialogLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiLogic/LoadingDialogLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiView.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiView/LoadingDialog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/UiView/LoadingDialog.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainDialog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainDialog.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/MainPanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Start.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UILogic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UILogic/StartDialogLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UILogic/StartDialogLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UiView.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UiView/StartDialog.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Start/UiView/StartDialog.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ArtResource/2D_Anim/rocker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ArtResource/2D_Anim/rocker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/StartDialog.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Dialogs/StartDialog.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/EUiID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/EUiID.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UILogic/StartDialogLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UILogic/StartDialogLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UiView/StartDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UiView/StartDialog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UiLogicManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UiLogicManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiDialogBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiDialogBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/EnumInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/LoadingDialog.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/LoadingDialog/UiLogic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/LoadingDialog/UiLogic/LoadingDialogLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/LoadingDialog/UiLogic/LoadingDialogLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/LoadingDialog/UiView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/LoadingDialog/UiView/LoadingDialog.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/LoadingDialog/UiView/LoadingDialog.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UILogic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UILogic/StartDialogLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UILogic/StartDialogLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UiView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UiView/StartDialog.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/StartDialog/UiView/StartDialog.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +56,23 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29LRWBDRhjCEfkO0dGMB3EtIm8s" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Discover.Launch.Via.Unity": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.5576923",
     "nodejs_package_manager_path": "npm",
     "rider.run.widget.enabled.cache": "false",
     "vue.rearranger.settings.migration": "true"
@@ -63,10 +97,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22188">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="22188" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -82,7 +116,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652890410329</updated>
-      <workItem from="1652890417493" duration="3411000" />
+      <workItem from="1652890417493" duration="3470000" />
+      <workItem from="1652923087180" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="【fix】init project">
       <created>1652890457119</created>
@@ -105,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652890613179</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="【fix】框架调整 修改提交">
+      <created>1652893906232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652893906232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,10 +168,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="【fix】init project" />
     <MESSAGE value="【fix】initial" />
     <MESSAGE value="【fix】init" />
-    <option name="LAST_COMMIT_MESSAGE" value="【fix】init" />
+    <MESSAGE value="【fix】框架调整 修改提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="【fix】框架调整 修改提交" />
   </component>
 </project>
