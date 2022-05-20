@@ -1,11 +1,11 @@
-using NativeWebSocket;
+using Net.WebSocket;
 using UnityEngine;
 
 namespace Net.Samples.WebSocketExample
 {
   public class Connection : MonoBehaviour
   {
-    private WebSocket _websocket;
+    private WebSocket.WebSocket _websocket;
 
     private const string ServerAddr = "192.168.229.180:12345";
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ namespace Net.Samples.WebSocketExample
       // websocket = new WebSocket("ws://echo.websocket.org");
 //      _websocket = new WebSocket("ws://localhost:3000");
 
-      _websocket = new WebSocket($"ws://{ServerAddr}");
+      _websocket = new WebSocket.WebSocket($"ws://{ServerAddr}");
 
       _websocket.OnOpen += () => { Debug.Log("Connection open!"); };
 

@@ -1,5 +1,4 @@
 ﻿using System;
-using AllManager.Model;
 using Functions.Main.Logic;
 using Functions.PersonDetailInfo.Logic;
 using Helpers;
@@ -11,7 +10,9 @@ namespace Managers.Model
         #region UiLogic 数据类
 
         private UiPersonDetailInfoLogic uiPersonDetailInfoLogic;
-        public UiPersonDetailInfoLogic UiPersonDetailInfoLogic => uiPersonDetailInfoLogic ??= new UiPersonDetailInfoLogic(this);
+
+        public UiPersonDetailInfoLogic UiPersonDetailInfoLogic
+            => uiPersonDetailInfoLogic ??= new UiPersonDetailInfoLogic(this);
 
         private UiMainLogic uiMainLogic;
         public UiMainLogic UiMainLogic => uiMainLogic ??= new UiMainLogic(this);

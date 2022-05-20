@@ -1,6 +1,6 @@
 using System;
 using DG.Tweening;
-using Helpers.Expand;
+using Helpers.Extension;
 using UnityEngine;
 using UnityEngine.UI;
 

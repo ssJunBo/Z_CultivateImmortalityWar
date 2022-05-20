@@ -36,7 +36,8 @@ namespace bFrameWork.Game.UIFrame.Base
             if (mObj != null)
             {
                 mObj.SetRealActive(false);
-                mObj.transform.SetAsFirstSibling();
+                mObj.transform.SetParent(GameManager.Instance.recyclePoolTrs);
+                mObj.transform.localPosition=Vector3.zero;
             }
         }
 

@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="【fix】新文件提交">
+    <list default="true" id="95a3b94e-f92b-462d-90f6-60062f7fe8b1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CultivateImmortalityWar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UiManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PersonInformationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PersonDetailData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PersonInformationData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PersonDetailData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/Logic/LoadingDialogLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/Logic/LoadingDialogLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/View/LoadingDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Loading/View/LoadingDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/Logic/UiMainLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/Logic/UiMainLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/View/MainDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/View/MainDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/View/UiInfoPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Functions/Main/View/UiInfoPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/ConstHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/ConstHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/Extension/AnimatedButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/Extension/AnimatedButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/Extension/AnimationEventHelp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/Extension/AnimationEventHelp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/Extension/PinchScrollRect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/Extension/PinchScrollRect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Helpers/HpHelp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Helpers/HpHelp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Model/CModelPlay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Model/CModelPlay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Model/IModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Model/IModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Net/Samples/WebSocketExample/Connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Net/Samples/WebSocketExample/Connection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Net/WebSocket/WebSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Net/WebSocket/WebSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/bFrameWork/Game/Tools/DrawCardAnimatorItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bFrameWork/Game/Tools/DrawCardAnimatorItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,10 +30,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Project/CultivateImmortalityWar/Assets/Scripts/Common/EnumInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/Logic/UiPersonDetailInfoLogic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Functions/PersonDetailInfo/View/PersonInfoPanel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Project/CultivateImmortalityWar/Assets/Scripts/Managers/Model/CModelPlay.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/80b6e89699f94b0bba3ad54c3e10266713ce00/d5/5bdf5c0c/Object.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -37,7 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.5576923&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.41037735&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -62,10 +79,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10180">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10180" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -83,7 +100,8 @@
       <updated>1652890410329</updated>
       <workItem from="1652890417493" duration="3470000" />
       <workItem from="1652923087180" duration="2112000" />
-      <workItem from="1652973282054" duration="4809000" />
+      <workItem from="1652973282054" duration="5099000" />
+      <workItem from="1653010114369" duration="1498000" />
     </task>
     <task id="LOCAL-00001" summary="【fix】init project">
       <created>1652890457119</created>
@@ -134,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652977885173</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="【fix】uimanager改成单例类">
+      <created>1652978481011</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652978481012</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +189,8 @@
     <MESSAGE value="【fix】制作主界面提交" />
     <MESSAGE value="【fix】结构调整 ui框架修改" />
     <MESSAGE value="【fix】新文件提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="【fix】新文件提交" />
+    <MESSAGE value="【fix】uimanager改成单例类" />
+    <option name="LAST_COMMIT_MESSAGE" value="【fix】uimanager改成单例类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -197,13 +223,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/bFrameWork/Game/UIFrame/Base/UiLogicBase.cs</url>
-          <line>98</line>
+          <line>99</line>
           <properties documentPath="C:\Project\CultivateImmortalityWar\Assets\bFrameWork\Game\UIFrame\Base\UiLogicBase.cs" initialLine="98" containingFunctionPresentation="method 'HandleUiResourceOk'">
             <startOffsets>
-              <option value="2805" />
+              <option value="2933" />
             </startOffsets>
             <endOffsets>
-              <option value="2828" />
+              <option value="2977" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

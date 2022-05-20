@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Helpers.Expand
+namespace Helpers.Extension
 {
     /// <summary>
     /// 动画事件帧辅助脚本

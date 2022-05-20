@@ -1,4 +1,4 @@
-﻿namespace AllManager.Model
+﻿namespace Managers.Model
 {
     public interface IModel
     {

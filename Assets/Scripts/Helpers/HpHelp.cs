@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Other
+namespace Helpers
 {
     public class HpHelp : MonoBehaviour
     {

@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Helpers.Expand
+namespace Helpers.Extension
 {
     public class AnimatedButton : Button
     {

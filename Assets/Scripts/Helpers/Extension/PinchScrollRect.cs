@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Other
+namespace Helpers.Extension
 {
     /// <summary>
     /// 老版本 需要更新

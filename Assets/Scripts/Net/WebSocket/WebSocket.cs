@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.WebSockets;
@@ -6,76 +7,74 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
 using UnityEngine;
-using System.Collections;
 
-public class MainThreadUtil : MonoBehaviour
+namespace Net.WebSocket
 {
-    public static MainThreadUtil Instance { get; private set; }
-    public static SynchronizationContext synchronizationContext { get; private set; }
-
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-    public static void Setup()
+    public class MainThreadUtil : MonoBehaviour
     {
-        Instance = new GameObject("MainThreadUtil")
-            .AddComponent<MainThreadUtil>();
-        synchronizationContext = SynchronizationContext.Current;
-    }
+        public static MainThreadUtil Instance { get; private set; }
+        public static SynchronizationContext synchronizationContext { get; private set; }
 
-    public static void Run(IEnumerator waitForUpdate)
-    {
-        synchronizationContext.Post(_ => Instance.StartCoroutine(
-                    waitForUpdate), null);
-    }
-
-    void Awake()
-    {
-        gameObject.hideFlags = HideFlags.HideAndDontSave;
-        DontDestroyOnLoad(gameObject);
-    }
-}
-
-public class WaitForUpdate : CustomYieldInstruction
-{
-    public override bool keepWaiting => false;
-
-    public MainThreadAwaiter GetAwaiter()
-    {
-        var awaiter = new MainThreadAwaiter();
-        MainThreadUtil.Run(CoroutineWrapper(this, awaiter));
-        return awaiter;
-    }
-
-    public class MainThreadAwaiter : INotifyCompletion
-    {
-        Action continuation;
-
-        public bool IsCompleted { get; set; }
-
-        public void GetResult() { }
-
-        public void Complete()
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        public static void Setup()
         {
-            IsCompleted = true;
-            continuation?.Invoke();
+            Instance = new GameObject("MainThreadUtil")
+                .AddComponent<MainThreadUtil>();
+            synchronizationContext = SynchronizationContext.Current;
         }
 
-        void INotifyCompletion.OnCompleted(Action continuation)
+        public static void Run(IEnumerator waitForUpdate)
         {
-            this.continuation = continuation;
+            synchronizationContext.Post(_ => Instance.StartCoroutine(
+                waitForUpdate), null);
+        }
+
+        void Awake()
+        {
+            gameObject.hideFlags = HideFlags.HideAndDontSave;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
-    public static IEnumerator CoroutineWrapper(IEnumerator theWorker, MainThreadAwaiter awaiter)
+    public class WaitForUpdate : CustomYieldInstruction
     {
-        yield return theWorker;
-        awaiter.Complete();
-    }
-}
+        public override bool keepWaiting => false;
 
-namespace NativeWebSocket
-{
+        public MainThreadAwaiter GetAwaiter()
+        {
+            var awaiter = new MainThreadAwaiter();
+            MainThreadUtil.Run(CoroutineWrapper(this, awaiter));
+            return awaiter;
+        }
+
+        public class MainThreadAwaiter : INotifyCompletion
+        {
+            Action continuation;
+
+            public bool IsCompleted { get; set; }
+
+            public void GetResult() { }
+
+            public void Complete()
+            {
+                IsCompleted = true;
+                continuation?.Invoke();
+            }
+
+            void INotifyCompletion.OnCompleted(Action continuation)
+            {
+                this.continuation = continuation;
+            }
+        }
+
+        public static IEnumerator CoroutineWrapper(IEnumerator theWorker, MainThreadAwaiter awaiter)
+        {
+            yield return theWorker;
+            awaiter.Complete();
+        }
+    }
+
     public delegate void WebSocketOpenEventHandler();
     public delegate void WebSocketMessageEventHandler(byte[] data);
     public delegate void WebSocketErrorEventHandler(string errorMsg);
@@ -660,7 +659,7 @@ namespace NativeWebSocket
                         {
                             lock (IncomingMessageLock)
                             {
-                              m_MessageList.Add(ms.ToArray());
+                                m_MessageList.Add(ms.ToArray());
                             }
 
                             //using (var reader = new StreamReader(ms, Encoding.UTF8))
@@ -673,7 +672,7 @@ namespace NativeWebSocket
                         {
                             lock (IncomingMessageLock)
                             {
-                              m_MessageList.Add(ms.ToArray());
+                                m_MessageList.Add(ms.ToArray());
                             }
                         }
                         else if (result.MessageType == WebSocketMessageType.Close)
@@ -839,5 +838,4 @@ namespace NativeWebSocket
         }
 
     }
-
 }

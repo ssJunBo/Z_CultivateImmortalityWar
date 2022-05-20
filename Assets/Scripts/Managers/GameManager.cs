@@ -9,11 +9,15 @@ namespace Managers
     [RequireComponent(typeof(TimeHelper))]
     public class GameManager : MonoSingleton<GameManager>
     {
+        #region UI
+
         [SerializeField] private bool loadFromAssetBundle;
-
         [Header("普通 Dialog 放在此节点下"), Space] public Transform ui2DTransform;
+        [Header("对象池回收节点")] public Transform recyclePoolTrs;
+        [Header("ui相机"), Space] public Camera uiCamera;
+        [Header("场景相机")] public Camera gameCamera;
 
-        [Header("对象池回收节点"), Space] public Transform recyclePoolTrs;
+        #endregion
 
         #region moudle play
 
@@ -22,7 +26,7 @@ namespace Managers
 
         private UiManager uiManager;
         public UiManager UiManager => uiManager ??= new UiManager();
-        
+
         #endregion
 
         protected override void Awake()
@@ -30,7 +34,7 @@ namespace Managers
             base.Awake();
 
             DontDestroyOnLoad(gameObject);
-            
+
             InitManager();
 
             // 从ab包加载就要先加载配置表

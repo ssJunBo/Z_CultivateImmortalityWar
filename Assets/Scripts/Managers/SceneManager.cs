@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections;
-using bFrame.Game.ResourceFrame;
-using bFrameWork.Game.ResourceFrame;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace MVC.Controller
+namespace Managers
 {
     /// <summary>
     /// 场景异步加载
