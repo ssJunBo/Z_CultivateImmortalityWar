@@ -1,4 +1,5 @@
 ﻿using System;
+using Common;
 using Functions.Main.Logic;
 using Functions.PersonDetailInfo.Logic;
 using Helpers;
@@ -11,8 +12,8 @@ namespace Managers.Model
 
         private UiPersonDetailInfoLogic uiPersonDetailInfoLogic;
 
-        public UiPersonDetailInfoLogic UiPersonDetailInfoLogic
-            => uiPersonDetailInfoLogic ??= new UiPersonDetailInfoLogic(this);
+        public UiPersonDetailInfoLogic UiPersonDetailInfoLogic =>
+            uiPersonDetailInfoLogic ??= new UiPersonDetailInfoLogic(this);
 
         private UiMainLogic uiMainLogic;
         public UiMainLogic UiMainLogic => uiMainLogic ??= new UiMainLogic(this);
@@ -58,8 +59,6 @@ namespace Managers.Model
                 case EUiType.Main:
                     UiMainLogic.Open();
                     break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(eUiType), eUiType, null);
             }
         }
     }

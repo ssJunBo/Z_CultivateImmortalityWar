@@ -1,5 +1,5 @@
 ﻿using bFrame.Game.Base;
-using Helpers;
+using Common;
 using Managers.Model;
 using UnityEngine;
 using TimeHelper = bFrameWork.Game.Tools.TimeHelper;
@@ -12,7 +12,9 @@ namespace Managers
         #region UI
 
         [SerializeField] private bool loadFromAssetBundle;
-        [Header("普通 Dialog 放在此节点下"), Space] public Transform ui2DTransform;
+        [Header("最底层 Dialog 放在此节点下"), Space] public Transform ui2DTrsLow;
+        [Header("普通层 Dialog 放在此节点下")] public Transform ui2DTrsHigh;
+
         [Header("对象池回收节点")] public Transform recyclePoolTrs;
         [Header("ui相机"), Space] public Camera uiCamera;
         [Header("场景相机")] public Camera gameCamera;

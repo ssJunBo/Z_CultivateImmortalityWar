@@ -46,7 +46,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814743171548666831}
   m_Layer: 0
-  m_Name: PersonDurahan
+  m_Name: Durahan
   m_TagString: UnitBase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

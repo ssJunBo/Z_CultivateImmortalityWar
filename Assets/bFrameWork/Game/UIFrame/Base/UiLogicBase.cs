@@ -1,4 +1,5 @@
-﻿using bFrameWork.Game.ResourceFrame;
+﻿using System;
+using bFrameWork.Game.ResourceFrame;
 using Common;
 using Helpers;
 using Managers;
@@ -11,17 +12,20 @@ namespace bFrameWork.Game.UIFrame.Base
     public abstract class UiLogicBase
     {
         protected abstract string Path { get; }
-
         // 具体ui
         protected abstract EUiID UiId { get; }
+        protected virtual EUiLayer UiLayer => EUiLayer.High_2D;
 
         private bool isShowing;
         private GameObject mObj;
         private UiDialogBase mDialog;
 
+        private GameManager gameManager;        
         public virtual void Open()
         {
             if (isShowing) return;
+            gameManager = GameManager.Instance;
+            
             DoOpen();
         }
 
@@ -36,7 +40,7 @@ namespace bFrameWork.Game.UIFrame.Base
             if (mObj != null)
             {
                 mObj.SetRealActive(false);
-                mObj.transform.SetParent(GameManager.Instance.recyclePoolTrs);
+                mObj.transform.SetParent(gameManager.recyclePoolTrs);
                 mObj.transform.localPosition=Vector3.zero;
             }
         }
@@ -55,8 +59,8 @@ namespace bFrameWork.Game.UIFrame.Base
 
             if (obj != null)
             {
-                var parentTrs = GameManager.Instance.ui2DTransform;
-                mDialog = GameManager.Instance.UiManager.GetUiDialog(UiId);
+                var parentTrs = GetParentTrs();
+                mDialog = gameManager.UiManager.GetUiDialog(UiId);
 
                 if (mDialog != null)
                 {
@@ -84,7 +88,7 @@ namespace bFrameWork.Game.UIFrame.Base
                         return;
                     }
 
-                    GameManager.Instance.UiManager.AddUiDialog(UiId, mDialog);
+                    gameManager.UiManager.AddUiDialog(UiId, mDialog);
                 }
 
                 InitLogic();
@@ -97,10 +101,26 @@ namespace bFrameWork.Game.UIFrame.Base
                 //UI的显示操作都应该放在ShowFinished中去做，而不应该在Init中去做 
                 TimeHelper.Instance.DelayHowManyFramesAfterCallBack(1, () => { mDialog.ShowFinished(); });
 
-                GameManager.Instance.UiManager.PushUi(this);
+                gameManager.UiManager.PushUi(this);
             }
         }
 
+        private Transform GetParentTrs()
+        {
+            Transform parentTrs = null;
+            switch (UiLayer)
+            {
+                case EUiLayer.Low_2D:
+                    parentTrs = gameManager.ui2DTrsLow;
+                    break;
+                case EUiLayer.High_2D:
+                    parentTrs = gameManager.ui2DTrsHigh;
+                    break;
+            }
+            
+            return parentTrs;
+        }
+        
         //注册游戏逻辑的委托事件
         protected virtual void InitLogic()
         {

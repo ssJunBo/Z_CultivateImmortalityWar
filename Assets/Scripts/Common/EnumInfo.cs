@@ -7,6 +7,19 @@
         Loading,
     }
 
+    public enum EUiType
+    {
+        Main,
+        PersonDetailInfo,
+    }
+
+
+    public enum EUiLayer
+    {
+        Low_2D = 0,
+        High_2D
+    }
+
     /// <summary>
     /// 职业
     /// </summary>
