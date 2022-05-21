@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Functions.PersonDetailInfo.View
 {
-    public class PersonDetailInfoDialog : UiDialogBase
+    public class UiPersonDetailInfoDialog : UiDialogBase
     {
         [SerializeField] private PersonInfoPanel personInfoPanel;
         

@@ -39,6 +39,15 @@ namespace Managers
             }
         }
 
+        public void ChangeScene()
+        {
+            while (uiLogicBaseStack.Count > 0)
+            {
+                UiLogicBase uiLogicBase = uiLogicBaseStack.Pop();
+                uiLogicBase.Close();
+            }
+        }
+
         public UiDialogBase GetUiDialog(EUiID uiID)
         {
             return dialogDict.ContainsKey(uiID) ? dialogDict[uiID] : null;

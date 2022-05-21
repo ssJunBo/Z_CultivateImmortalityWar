@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace bFrame.Game.Base
+namespace bFrameWork.Game.Base
 {
     public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
     {
@@ -10,13 +10,12 @@ namespace bFrame.Game.Base
         {
             if (Instance == null)
             {
-                Instance = (T) this;
+                Instance = (T)this;
             }
-            else
-            {
-                Debug.LogError("Get a second instance of this class :" + this.GetType());
-            }
+            // else
+            // {
+            //     Debug.LogError("Get a second instance of this class :" + GetType());
+            // }
         }
-        
     }
 }

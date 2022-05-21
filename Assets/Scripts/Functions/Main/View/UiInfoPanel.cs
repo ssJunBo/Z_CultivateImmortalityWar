@@ -1,8 +1,12 @@
-﻿using Data;
+﻿using System;
+using Data;
+using Managers;
 using Managers.Model;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 namespace Functions.Main.View
 {
@@ -12,7 +16,8 @@ namespace Functions.Main.View
         [SerializeField] private TextMeshProUGUI personNameTxt;
 
         private CModelPlay modelPlay;
-        public void SetData(CModelPlay modelPlay,PersonDetailData personDetailInfo)
+
+        public void SetData(CModelPlay modelPlay, PersonDetailData personDetailInfo)
         {
             this.modelPlay = modelPlay;
 
@@ -24,10 +29,16 @@ namespace Functions.Main.View
             personHeadImg.sprite = null;
             personNameTxt.text = personDetailInfo.name;
         }
-        
+
         public void OnClickHeadIcon()
         {
             modelPlay.UiPersonDetailInfoLogic.Open();
+        }
+
+        public void OnClickStartBattle()
+        {
+            // 打开战斗选择界面
+            modelPlay.UiLoadingLogic.Open(ConStr.Fighting, () => { modelPlay.UiFightingLogic.Open(); });
         }
     }
 }

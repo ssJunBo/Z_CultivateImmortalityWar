@@ -1,5 +1,6 @@
-﻿using bFrame.Game.Base;
+﻿using bFrameWork.Game.Base;
 using Common;
+using Helpers;
 using Managers.Model;
 using UnityEngine;
 using TimeHelper = bFrameWork.Game.Tools.TimeHelper;
@@ -11,8 +12,10 @@ namespace Managers
     {
         #region UI
 
-        [SerializeField] private bool loadFromAssetBundle;
+        [SerializeField, Space] private bool loadFromAssetBundle;
+
         [Header("最底层 Dialog 放在此节点下"), Space] public Transform ui2DTrsLow;
+
         [Header("普通层 Dialog 放在此节点下")] public Transform ui2DTrsHigh;
 
         [Header("对象池回收节点")] public Transform recyclePoolTrs;
@@ -29,27 +32,30 @@ namespace Managers
         private UiManager uiManager;
         public UiManager UiManager => uiManager ??= new UiManager();
 
+        private SceneManager sceneManager;
+        public SceneManager SceneManager => sceneManager ??= new SceneManager(this);
+
         #endregion
-
-        protected override void Awake()
-        {
-            base.Awake();
-
-            DontDestroyOnLoad(gameObject);
-
-            InitManager();
-
-            // 从ab包加载就要先加载配置表
-            // ResourceManager.Instance.MLoadFromAssetBundle = loadFromAssetBundle;
-            // if (ResourceManager.Instance.MLoadFromAssetBundle)
-            // AssetBundleManager.Instance.LoadAssetBundleConfig();
-        }
 
         private void Start()
         {
-            LoadConfig();
+            if (!SceneHelp.IsInitGameManager)
+            {
+                DontDestroyOnLoad(gameObject);
 
-            ModelPlay.OpenUiByType(EUiType.Main);
+                // 从ab包加载就要先加载配置表
+                // ResourceManager.Instance.MLoadFromAssetBundle = loadFromAssetBundle;
+                // if (ResourceManager.Instance.MLoadFromAssetBundle)
+                // AssetBundleManager.Instance.LoadAssetBundleConfig();
+
+                InitManager();
+
+                LoadConfig();
+
+                ModelPlay.OpenUiByType(EUiType.Main);
+
+                SceneHelp.IsInitGameManager = true;
+            }
         }
 
         private void InitManager()

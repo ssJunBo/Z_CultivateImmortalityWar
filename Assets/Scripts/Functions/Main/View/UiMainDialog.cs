@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Functions.Main.View
 {
-    public class MainDialog : UiDialogBase
+    public class UiMainDialog : UiDialogBase
     {
         [SerializeField] private UiInfoPanel uiInfoPanel;
 

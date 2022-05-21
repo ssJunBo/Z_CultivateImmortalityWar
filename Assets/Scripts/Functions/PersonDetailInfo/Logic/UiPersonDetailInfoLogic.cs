@@ -7,8 +7,8 @@ namespace Functions.PersonDetailInfo.Logic
     public class UiPersonDetailInfoLogic : UiLogicBase
     {
         #region base info
-        protected override string Path => "Prefabs/Dialogs/PersonDetailInfoDialog";
-        protected override EUiID UiId => EUiID.PersonDetailInfo;
+        protected override string Path => "Prefabs/Dialogs/UiPersonDetailInfoDialog";
+        public override EUiID UiId => EUiID.PersonDetailInfo;
         #endregion
         
         private readonly CModelPlay _model;

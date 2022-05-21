@@ -1,5 +1,7 @@
 ﻿using System;
 using Common;
+using Functions.Fighting.Logic;
+using Functions.Loading.Logic;
 using Functions.Main.Logic;
 using Functions.PersonDetailInfo.Logic;
 using Helpers;
@@ -18,6 +20,11 @@ namespace Managers.Model
         private UiMainLogic uiMainLogic;
         public UiMainLogic UiMainLogic => uiMainLogic ??= new UiMainLogic(this);
 
+        private UiLoadingLogic uiLoadingLogic;
+        public UiLoadingLogic UiLoadingLogic => uiLoadingLogic ??= new UiLoadingLogic(this);
+        
+        private UiFightingLogic uiFightingLogic;
+        public UiFightingLogic UiFightingLogic => uiFightingLogic ??= new UiFightingLogic(this);
         #endregion
 
         public void Create()

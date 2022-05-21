@@ -5,6 +5,7 @@
         Main = 0,
         PersonDetailInfo,
         Loading,
+        Fighting,
     }
 
     public enum EUiType

@@ -13,7 +13,7 @@ namespace bFrameWork.Game.UIFrame.Base
     {
         protected abstract string Path { get; }
         // 具体ui
-        protected abstract EUiID UiId { get; }
+        public abstract EUiID UiId { get; }
         protected virtual EUiLayer UiLayer => EUiLayer.High_2D;
 
         private bool isShowing;

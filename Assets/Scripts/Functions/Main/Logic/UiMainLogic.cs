@@ -7,8 +7,8 @@ namespace Functions.Main.Logic
 {
     public class UiMainLogic : UiLogicBase
     {
-        protected override string Path => "Prefabs/Dialogs/MainDialog";
-        protected override EUiID UiId => EUiID.Main;
+        protected override string Path => "Prefabs/Dialogs/UiMainDialog";
+        public override EUiID UiId => EUiID.Main;
         protected override EUiLayer UiLayer => EUiLayer.Low_2D;
 
         public CModelPlay model { get; }
